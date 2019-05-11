@@ -1,0 +1,120 @@
+<!-- ------------------------------left side bar start-- --------------------------->
+<div id="mySidenav" class="sidenav" style="margin-top: 10px">
+        <a href="javascript:void(0)" class="closebtn" onclick="cNav()">&times;</a>
+      
+        <a routerLink="/home">Home</a>
+        <a routerLink="/allsongs">All Songs</a>
+        <a routerLink="/allalbums">Albums</a>
+        <a href="#">Artists</a>
+        <a routerLink="/favourites">My Favourities</a>
+        
+      
+      </div>
+      
+      <div  style="background-color: black; height: 50px;">
+          <span style="font-size:25px;cursor:pointer;padding-top: 10px; color: aliceblue; float: left;" onclick="oNav()">&#9776; Menu
+         </span> 
+      
+          
+         <h5 style="color: aliceblue; font-size: 40px; margin-left: 350px;padding-top: 5px">KAKAKI MUSIC APP
+            <button type="button" class="btn btn-default btn-sm" style="float: right; padding: 10px">
+                <span routerLink="" class="glyphicon glyphicon-log-out"> Logout</span>
+              </button>
+        </h5>
+       
+        </div>
+      
+    <!-- side bar enddd ----------------------------------------------------------------------------------------------------------   -->
+    
+    
+
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<div  style="background-color: lightcyan">
+        <div class="container">
+                <h4 style="color:rgb(46, 15, 15);text-align:center; font-size: -webkit-xxx-large">
+                    Chanson
+                </h4>
+            </div>
+            
+            <br>
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+            
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <div class="text-center">
+                                    <img src="assets/images/v5.jpg" class="img-responsive" width="350px" height="110%">
+                                    <br><br>
+            
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>Song Name</td>
+                                            <td>{{song.songName}}</td>
+            
+                                        </tr>
+                                        <tr>
+                                            <td>Song Title</td>
+                                            <td>{{song.title}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Artist</td>
+                                            <td>
+                                                <span *ngFor="let artist of song.artist">
+                                                    {{artist.firstName}}{{artist.lastName}}
+                                                    <br>
+                                                </span>
+            
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Song Category</td>
+                                            <td>{{song.category}}</td>
+                                        </tr>
+            
+                                        <tr>
+                                            <td>Rating</td>
+                                            <td>{{song.rating}}</td>
+            
+                                        </tr>
+                                        <tr>
+                                            <td>Release Date</td>
+                                            <td>{{song.releaseDate | date}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div>
+                    <div class="container">
+                        <div class="container-audio" style="width:80%; float:left; margin-left:10%">
+                            <audio controls loop autoplay>
+                                <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/new_year_dubstep_minimix.ogg"
+                                    type="audio/ogg">
+                                Your browser dose not Support the audio Tag
+                            </audio>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container" style="color:black">
+                        <div class="list-group text-center" style="margin-left:57px">
+            
+                            <div >
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-dark">This is a dark list
+                                            group item</a>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
